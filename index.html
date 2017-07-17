@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{% assign allPosters = site.posters %}
+
+<div class="page">
+	{{ site.title }}
+</div>
+
+<ul>
+
+
+	{% for poster in allPosters %}
+	{% if poster.published %}
+	<li>
+		<a href="{{ poster.url }}">
+			{% if poster.image %}
+			<img src="/assets/posters/{{ poster.image }}" width="400">
+			{% endif %}
+			Poster Number {{ poster.title }}
+
+			<h1>content will be below this</h1>
+			<div class="content">{{ poster.content }}</div>
+		</a>
+	</li>
+	{% endif %}
+	{% endfor %}
+
+</ul>
+
+
