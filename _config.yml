@@ -21,7 +21,7 @@ collections:
           type: "posters"
         values:
           layout: poster
-include: ["_pages"]
+include: ["_pages","_posters"]
 
 
 
@@ -29,4 +29,4 @@ include: ["_pages"]
 
 # Build settings
 markdown: kramdown
-permalink: /:year/:title:output_ext
+permalink: /:title/
