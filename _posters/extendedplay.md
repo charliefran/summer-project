@@ -2,7 +2,7 @@
 title: Extendedplay
 published: true
 layout: poster
-image: extendedplay.jpg
+image: 2.jpg
 supplementary_images: 
   - image: 1.jpg
   - image: 2.jpg

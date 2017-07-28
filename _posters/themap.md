@@ -2,7 +2,7 @@
 title: The Map
 published: true
 layout: poster
-image: themap.jpg
+image: 4.jpg
 supplementary_images: 
   - image: 1.jpg
   - image: 2.jpg

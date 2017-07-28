@@ -2,7 +2,7 @@
 title: Dia Beacon
 published: true
 layout: poster
-image: diabeacon.jpg
+image: 1.jpg
 supplementary_images: 
   - image: 1.jpg
   - image: 2.jpg

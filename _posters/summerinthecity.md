@@ -2,7 +2,7 @@
 title: Summer in the City
 published: true
 layout: poster
-image: summerinthecity.jpg
+image: 3.jpg
 supplementary_images: 
   - image: 1.jpg
   - image: 2.jpg

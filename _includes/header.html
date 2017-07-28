@@ -1,0 +1,22 @@
+
+<header id="header-main">
+  <nav>
+    <ul>
+      {% for page in allPages %}
+        {% if page.show_in_nav == true %}
+          <li>
+              <a href="{{ page.url }}">
+                {{ page.title }}
+              </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+  <nav id="header-bottom">
+    <ul>
+      <li>charlie francis</li>
+      <li><a href="charfran.com">charfran.com</a></li>
+    </ul>
+  </nav>
+</header>
