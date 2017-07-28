@@ -1,0 +1,26 @@
+// _grid-settings.scss
+// Breakpoint Definitions for Toddy
+$width-small-max: 45em;
+
+$width-medium-min: 45.063em;
+$width-medium-max: 58em;
+
+$width-large-min: 58.063em;
+$width-large-max: 89em;
+
+$width-xlarge-min: 89.063em;
+$width-xlarge-max: 120em;
+
+$width-xxlarge-min: 120.063em;
+
+// Fixed gutter sizes (only functional if $fixed-gutter is set to true)
+$fixed-gutter-width: rem(18) !global;
+$fixed-gutter-medium: rem(36) !global;
+$fixed-gutter-large: rem(36) !global;
+$fixed-gutter-xlarge: null !global;
+$fixed-gutter-xxlarge: null !global;
+
+// in grid-settings.scss
+$small-column-count: 4 !global;
+$medium-column-count: 4 !global;
+$large-column-count: 8 !global;

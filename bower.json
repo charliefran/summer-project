@@ -2,7 +2,6 @@
   "name": "summer-project",
   "version": "0.0.1",
   "dependencies": {
-    "toddy": "^1.0.2"
   },
   "private": true
 }

@@ -2,14 +2,37 @@
 layout: default
 ---
 {% assign allPosters = site.posters %}
+{% assign allPages = site.pages %}
 
 <div class="page">
-	{{ site.title }}
+	<div class="wrapper">
+		<div class="flex-row">
+			<div class="small-4 flex-columns">
+				{{ site.title }}		
+				{{ page.title }}
+			</div>
+			<div class="small-4 flex-columns">
+				{{ site.description }}
+			</div>
+			
+		</div>
+		
+	</div>
+	
 </div>
 
-{{ site.description }}
+{% for page in allPages %}
+	{{page.title}}
+{% endfor %}
 
-<ul>
+{% for section in site.pages %}
+
+{% if page.layout == 'about' or page.layout == 'index' %}
+{{ page.title }}
+{% endif %}
+
+{% endfor %}
+
 
 	{% for poster in allPosters %}
 	{% if poster.published %}
@@ -24,6 +47,7 @@ layout: default
 	{% endfor %}
 
 </ul>
+
 
 
 <!-- {% for page in site.pages %}
