@@ -1,11 +1,30 @@
 ---
-layout: default
+layout: page
 ---
-<div class="page">
-	{{ page.title }}
-</div>
-{{ content }}
+{% assign allPosters = site.posters %}
+{% assign allPages = site.pages %}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    {% include header.html %}
+    <div id="page-content">
+      {{ content }}
+    </div>
+  </body>
+</html>
 
 
 
 
+
+
+
+
+<!-- {% for page in site.pages %}
+<a href="{{ page.url }}"></a>
+{% endfor %} -->

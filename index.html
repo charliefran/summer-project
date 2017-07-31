@@ -7,19 +7,7 @@ layout: default
 <div class="page">
 	<div class="wrapper">
 		<div class="flex-row">
-			<div class="small-4 flex-columns">
-				<ul>
-					{% for page in allPages %}
-						{% if page.show_in_nav == true %}
-							<li>
-								<a href="{{ poster.url }}">
-								{{ page.title }}
-							</a>
-						</li>
-					{% endif %}
-				{% endfor %}
-				</ul>
-			</div>
+	
 			<div class="small-4 flex-columns">
 				{{ site.description }}
 			</div>
@@ -29,30 +17,17 @@ layout: default
 	</div>
 	
 </div>
-
-
-
-
-
-
-  {% for item in page.image %}
-    <img src="/assets/posters{{ page.slug }}/{{ item.image }}" width="400">
-  {% endfor %}
-
-
+ 
 <ul>
 	{% for poster in allPosters %}
 	{% if poster.published %}
-	<li>
-		<a href="{{ poster.url }}">
-			
-			{{ poster.title }}
-
-		</a>
-	</li>
+		<li>
+			<a href="{{ poster.url }}">
+				<img src="/assets/posters/{{ poster.image }}" width="260">
+			</a>
+		</li>
 	{% endif %}
 	{% endfor %}
-
 </ul>
 
 

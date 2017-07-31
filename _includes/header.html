@@ -1,6 +1,9 @@
+{% assign allPages = site.pages %}
+
 
 <header id="header-main">
-  <nav>
+
+  <nav id="site-nav">
     <ul>
       {% for page in allPages %}
         {% if page.show_in_nav == true %}

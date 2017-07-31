@@ -12,7 +12,7 @@ github_username:  charliefran
 strict_front_matter: true
 sass:
   sass_dir: css
-  style: compressed
+  style: expanded
 collections:
   posters:
     output: true
@@ -24,6 +24,7 @@ collections:
           type: "posters"
         values:
           layout: poster
+          paginate: 4
 include: ["_pages","_posters"]
 
 

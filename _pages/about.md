@@ -5,4 +5,4 @@ layout: page
 show_in_nav: true
 ---
 
-More in-depth information about the project
+Detailed statement about the project.

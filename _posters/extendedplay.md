@@ -1,8 +1,11 @@
 ---
 title: Extendedplay
 published: true
+page: 2
+next_page_path: 3
+previous_page_path: 1
 layout: poster
-image: 2.jpg
+image: extendedplay.jpg
 supplementary_images: 
   - image: 1.jpg
   - image: 2.jpg

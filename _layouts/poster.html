@@ -1,25 +1,65 @@
 ---
-layout: default
+layout: poster
 ---
-<div class="poster">
-	<h1>
-    {{ page.title }}
-  </h1>
-  
-  <img src="/assets/posters/{{ page.slug }}/{{ page.image }}">
+{% assign allPosters = site.posters %}
+{% assign thisPosterIndex = null %}
+{% assign prevPosterIndex = null %}
+{% assign nextPosterIndex = null %}
+<!-- Loop through posters to determine current index and next index -->
+{% for poster in allPosters %}
+  {% if poster.published and poster.title == page.title %}
+    {% assign thisPosterIndex = forloop.index0 %}
+  {% endif %}
+  {% if poster.published and forloop.index0 > thisPosterIndex %}
+    {% assign nextPosterIndex = forloop.index0 %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+<!-- If current index is not the first iteration, get the previous iteration -->
+{% if thisPosterIndex != 0 %}
+  {% assign prevPosterIndex = thisPosterIndex | minus: 1%}
+{% endif %}
 
-  {{ page.content }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    {{ thisPoster }}
+    {{ nextPoster }}
+    {% include header.html %}
+    <div id="single-poster">
+      <div class="section-scroll">
+        {{ content }}
+        
+        {% for item in page.supplementary_images %}
+        <img src="/assets/posters/{{ page.slug }}/{{ item.image }}" height="160">
+        {% endfor %}
+      </div>
+      <div class="poster-large">
 
-  {% for item in page.supplementary_images %}
-    <img src="/assets/posters/{{ page.slug }}/{{ item.image }}" width="400">
-  {% endfor %}
+        {% for item in page.image %}
+        <img src="/assets/posters/{{ page.image }}" width="1088">
+        {% endfor %}
+      </div>
+    </div>
 
-  <ul>
-    {% for item in page.list %}
-      <li>
-       {{ page.list }}
-      </li>
-    {% endfor %}
-  </ul>
 
-</div>
+    <div class="next-poster">
+        {% if prevPosterIndex != null %} 
+          {% assign prevPoster = allPosters[prevPosterIndex] %} 
+          <a href="{{ prevPoster.url }}">Previous Poster: {{ prevPoster.title }}</a>
+        {% endif %}
+
+        {% if nextPosterIndex != null %}
+          {% assign nextPoster = allPosters[nextPosterIndex] %}
+          <a href="{{ nextPoster.url }}">Next Poster: {{ nextPoster.title }}</a>
+        {% endif %}
+    </div>
+
+
+
+  </body>
+</html>
+

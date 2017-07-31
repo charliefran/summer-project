@@ -6,16 +6,12 @@ $golden: 1.618;
 @import "toddy/toddy";
 @import "grid-settings";
 
-.wrapper {
-  @include outer-container(1280px);
-  padding-left: $fixed-gutter-width/2;
-  padding-right: $fixed-gutter-width/2;
-  @include media($medium-up) {
-    padding-left: $fixed-gutter-medium/2;
-    padding-right: $fixed-gutter-medium/2;
-  }
-  @include media($large-up) {
-    padding-left: $fixed-gutter-large/2;
-    padding-right: $fixed-gutter-large/2;
-  }
-}
+// Globals
+@import 'global/layout';
+@import 'global/reset';
+
+// Includes
+@import "includes/header-main";
+
+// Templates
+@import "templates/single-poster";
