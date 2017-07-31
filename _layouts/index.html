@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: index
 ---
 {% assign allPosters = site.posters %}
 {% assign allPages = site.pages %}
@@ -12,9 +12,16 @@ layout: page
   </head>
   <body>
     {% include header.html %}
-    <div id="page-content">
+     <div id="page-content">
+
+      {% for image in site.static_files %}
+       {% if image.path contains 'assets/posters' %}
+         <img src="{{ image.path }}" alt="image" height="160"/>
+        {% endif %}
+      {% endfor %}
+
       {{ content }}
-    </div>
+      </div>
   </body>
 </html>
 

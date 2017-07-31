@@ -1,7 +1,7 @@
 ---
 layout: poster
 ---
-{% assign allPosters = site.posters %}
+{% assign allPosters = site.posters | sort: 'order'%}
 {% assign thisPosterIndex = null %}
 {% assign prevPosterIndex = null %}
 {% assign nextPosterIndex = null %}
@@ -38,7 +38,6 @@ layout: poster
         {% endfor %}
       </div>
       <div class="poster-large">
-
         {% for item in page.image %}
         <img src="/assets/posters/{{ page.image }}" width="1088">
         {% endfor %}

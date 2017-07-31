@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign allPosters = site.posters %}
+{% assign allPosters = site.posters | sort: 'order'%}
 {% assign allPages = site.pages %}
 
 <div class="page">
@@ -29,6 +29,7 @@ layout: default
 	{% endif %}
 	{% endfor %}
 </ul>
+
 
 
 
